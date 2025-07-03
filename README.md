@@ -1,5 +1,6 @@
 # Healthcare_Lab_Test
 
+
 #  Weight Prediction Using Linear Regression
 
 This project aims to predict an individual's weight based on age, height, and exercise level using a linear regression model.
@@ -23,8 +24,16 @@ This project aims to predict an individual's weight based on age, height, and ex
 - Metric: Mean Squared Error (MSE)
 - Result: **MSE ≈ 190.75**
 
-##  Reflection
-This project demonstrates how lifestyle and demographic indicators can be used to predict health metrics like weight. The results highlight that while linear regression provides a simple and interpretable model, accuracy could improve with more features like diet, sleep, or activity tracker data.
+##  Reflection on the Problem-Solving Process
+
+The main challenge in this project was the absence of a direct 'exercise level' variable. To address this, we created a synthetic `Exercise_Level` feature by mapping BMI categories to approximate physical activity levels. This step required thoughtful consideration and domain logic.
+
+Next, we handled missing values, which caused an error during model training. We resolved this by imputing the mode for the `Exercise_Level` column, which preserved the dataset's structure while avoiding bias.
+
+Training the linear regression model was straightforward. The evaluation using MSE showed that while the model has some predictive power, real-world weight prediction likely needs additional variables (e.g., sleep, diet, genetics) to be more accurate. 
+
+Overall, this process deepened our understanding of data preprocessing, feature engineering, and model evaluation using a healthcare dataset.
+a.
 
 ##  Files
 - `Lab_Test.ipynb`: Jupyter Notebook with full analysis
